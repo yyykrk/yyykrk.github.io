@@ -8,7 +8,6 @@ export const Experience = () => {
     <Container>
       <Stack>
         <SectionTitle>Experience</SectionTitle>
-        {/* experienceをTimeline+Cardで表現 */}
         <Timeline
           active={EXPERIENCES.length}
           bulletSize={28}
