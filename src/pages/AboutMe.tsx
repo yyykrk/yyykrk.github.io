@@ -28,7 +28,7 @@ export const AboutMe = () => {
 
   return (
     <Container>
-      <Stack gap="xl">
+      <Stack>
         <SectionTitle>About Me</SectionTitle>
         <Card
           radius="xl"

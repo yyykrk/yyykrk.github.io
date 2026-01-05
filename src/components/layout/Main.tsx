@@ -1,4 +1,4 @@
-import { AppShell } from "@mantine/core";
+import { AppShell, Stack } from "@mantine/core";
 import type { SectionDefinition } from "../../data/sections";
 
 type MainProps = {
@@ -8,11 +8,13 @@ type MainProps = {
 export const Main = ({ sections }: MainProps) => {
   return (
     <AppShell.Main>
-      {sections.map(({ id, Component: SectionComponent }) => (
-        <section key={id} id={id}>
-          <SectionComponent />
-        </section>
-      ))}
+      <Stack gap="xl">
+        {sections.map(({ id, Component: SectionComponent }) => (
+          <section key={id} id={id}>
+            <SectionComponent />
+          </section>
+        ))}
+      </Stack>
     </AppShell.Main>
   );
 };

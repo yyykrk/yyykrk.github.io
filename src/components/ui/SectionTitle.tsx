@@ -14,6 +14,7 @@ export const SectionTitle = ({ children }: SectionTitleProps) => {
         textDecorationColor: "var(--mantine-color-green-8)",
         textDecorationThickness: 3,
         textUnderlineOffset: 9,
+        marginBottom: 12,
       }}
     >
       {children}

@@ -6,7 +6,7 @@ import { AchivementCard } from "../components/ui/AchivementCard";
 export const Achievements = () => {
   return (
     <Container>
-      <Stack gap="xl">
+      <Stack>
         <SectionTitle>Achievements</SectionTitle>
         <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="lg">
           {ACHIEVEMENTS.map((achievement) => (
