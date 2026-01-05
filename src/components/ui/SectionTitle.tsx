@@ -1,4 +1,5 @@
 import { Title } from "@mantine/core";
+import classes from "./SectionTitle.module.css";
 
 type SectionTitleProps = {
   children: React.ReactNode;
@@ -6,17 +7,7 @@ type SectionTitleProps = {
 
 export const SectionTitle = ({ children }: SectionTitleProps) => {
   return (
-    <Title
-      order={1}
-      style={{
-        textAlign: "center",
-        textDecoration: "underline",
-        textDecorationColor: "var(--mantine-color-green-8)",
-        textDecorationThickness: 3,
-        textUnderlineOffset: 9,
-        marginBottom: 12,
-      }}
-    >
+    <Title order={1} className={classes.title}>
       {children}
     </Title>
   );

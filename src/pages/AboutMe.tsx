@@ -12,6 +12,7 @@ import {
 } from "@mantine/core";
 import { SectionTitle } from "../components/ui/SectionTitle";
 import { socialLinks } from "../data/socialLinks";
+import classes from "./AboutMe.module.css";
 
 export const AboutMe = () => {
   const highlightTags = [
@@ -35,17 +36,11 @@ export const AboutMe = () => {
           p={{ base: "lg", md: "xl" }}
           withBorder
           shadow="lg"
-          style={{ borderColor: "var(--mantine-color-gray-3)" }}
+          className={classes.card}
         >
           <Card.Section inheritPadding py="md">
             <Stack gap={2}>
-              <Text
-                fw={800}
-                style={{
-                  fontSize: "2.25rem",
-                  color: "var(--mantine-color-gray-9)",
-                }}
-              >
+              <Text fw={800} className={classes.name}>
                 Ikemoto Yusuke
               </Text>
               <Text size="lg" c="var(--mantine-color-gray-7)">
@@ -87,11 +82,11 @@ export const AboutMe = () => {
               </Group>
             </Stack>
 
-            <Stack gap="md" style={{ flex: "1 1 320px" }}>
+            <Stack gap="md" className={classes.detailsStack}>
               <Text
                 c="var(--mantine-color-gray-7)"
                 size="md"
-                style={{ whiteSpace: "pre-line" }}
+                className={classes.description}
               >
                 {"　"}I am a machine learning engineer with 5+ years of
                 experience in applying machine learning and generative AI to
@@ -127,13 +122,7 @@ export const AboutMe = () => {
               <Group gap="xl" wrap="wrap">
                 {stats.map(({ label, value }) => (
                   <Stack key={label} gap={2}>
-                    <Text
-                      fw={700}
-                      style={{
-                        fontSize: "1.6rem",
-                        color: "var(--mantine-color-green-7)",
-                      }}
-                    >
+                    <Text fw={700} className={classes.statValue}>
                       {value}
                     </Text>
                     <Text size="sm" c="var(--mantine-color-gray-6)">
