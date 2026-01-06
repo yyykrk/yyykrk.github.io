@@ -1,6 +1,6 @@
 import type { ComponentType } from "react";
 import { AboutMe } from "../pages/AboutMe";
-import { Award } from "../pages/Award";
+import { Achievements } from "../pages/Achievements";
 import { Experience } from "../pages/Experience";
 
 export type SectionDefinition = {
@@ -21,8 +21,8 @@ export const SECTIONS: SectionDefinition[] = [
     Component: Experience,
   },
   {
-    id: "award",
-    label: "Award",
-    Component: Award,
+    id: "achievements",
+    label: "Achievements",
+    Component: Achievements,
   },
 ];

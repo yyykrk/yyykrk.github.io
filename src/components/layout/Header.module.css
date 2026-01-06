@@ -1,5 +1,5 @@
 .header {
-  height: 72px;
+  height: var(--app-header-height);
   margin-bottom: 120px;
   background-color: var(--mantine-color-body);
   border-bottom: 1px solid
@@ -7,7 +7,7 @@
 }
 
 .inner {
-  height: 72px;
+  height: var(--app-header-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,7 +15,7 @@
 
 .links {
   padding-top: var(--mantine-spacing-sm);
-  height: 72px;
+  height: var(--app-header-height);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -63,4 +63,9 @@
       transform: scaleX(1);
     }
   }
+}
+
+.drawerInner {
+  top: var(--app-header-height);
+  height: calc(100vh - var(--app-header-height));
 }
