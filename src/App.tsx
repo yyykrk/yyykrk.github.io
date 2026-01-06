@@ -18,7 +18,7 @@ export const App = () => {
   });
 
   return (
-    <AppShell padding="md" header={{ height: 72 }}>
+    <AppShell padding="md" header={{ height: "var(--app-header-height)" }}>
       <Header sections={SECTIONS} activeSectionId={activeSectionId} />
       <Main sections={SECTIONS} />
       <Footer />

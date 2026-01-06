@@ -1,4 +1,8 @@
+:root {
+  --app-header-height: 72px;
+}
+
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 72px;
+  scroll-padding-top: var(--app-header-height);
 }
