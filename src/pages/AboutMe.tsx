@@ -10,6 +10,7 @@ import {
   Stack,
   Text,
 } from "@mantine/core";
+import { FaBuilding, FaMapMarkerAlt } from "react-icons/fa";
 import { SectionTitle } from "../components/ui/SectionTitle";
 import { socialLinks } from "../data/socialLinks";
 import classes from "./AboutMe.module.css";
@@ -39,16 +40,33 @@ export const AboutMe = () => {
           className={classes.card}
         >
           <Card.Section inheritPadding py="md">
-            <Stack gap={2}>
+            <Stack gap={0}>
               <Text fw={800} className={classes.name}>
                 Ikemoto Yusuke
               </Text>
-              <Text size="lg" c="var(--mantine-color-gray-7)">
-                Machine Learning Engineer @ Preferred Networks, Inc.
+              <Text size="xl" c="var(--mantine-color-gray-7)">
+                Machine Learning Engineer
               </Text>
-              <Text size="lg" c="var(--mantine-color-gray-7)">
-                Tokyo, Japan
-              </Text>
+              <Group gap={8} wrap="nowrap">
+                <FaBuilding
+                  size={18}
+                  color="var(--mantine-color-gray-6)"
+                  aria-hidden="true"
+                />
+                <Text size="lg" c="var(--mantine-color-gray-7)">
+                  Preferred Networks, Inc.
+                </Text>
+              </Group>
+              <Group gap={8} wrap="nowrap">
+                <FaMapMarkerAlt
+                  size={18}
+                  color="var(--mantine-color-gray-6)"
+                  aria-hidden="true"
+                />
+                <Text size="lg" c="var(--mantine-color-gray-7)">
+                  Tokyo, Japan
+                </Text>
+              </Group>
             </Stack>
           </Card.Section>
           <Group align="stretch" gap="xl" justify="space-between" wrap="wrap">
