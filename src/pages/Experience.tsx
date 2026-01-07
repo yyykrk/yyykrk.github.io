@@ -2,6 +2,7 @@ import { Container, Stack, Timeline } from "@mantine/core";
 import { SectionTitle } from "../components/ui/SectionTitle";
 import { EXPERIENCES } from "../data/experiences";
 import { ExperienceCard } from "../components/ui/ExperienceCard";
+import { motion } from "motion/react";
 
 export const Experience = () => {
   return (
@@ -24,7 +25,14 @@ export const Experience = () => {
             <Timeline.Item
               key={`${experience.organization}-${experience.from}-${experience.to}`}
             >
-              <ExperienceCard experience={experience} />
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <ExperienceCard experience={experience} />
+              </motion.div>
             </Timeline.Item>
           ))}
           <Timeline.Item
